@@ -1,0 +1,143 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+ 
+
+}
+
+.App{
+  width: 100%;
+  min-height: 100vh;
+}
+header{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  border-bottom: 2px solid silver;
+
+}
+header a{
+  margin: 0px 10px;
+}
+
+.form{
+  width: 100%;
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form input{
+  margin: 10px 0;
+  padding: 5px 10px;
+}
+.form button, .contact__form button{
+  padding: 5px 15px;
+  border: 2px solid #00808a;
+  color: #00808a;
+  font-weight: bold;
+  transition: .3s;
+  background: none;
+}
+.form button:hover, .contact__form button:hover{
+  background:#00808a;
+  color: white;
+}
+.contact__form{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid silver;
+}
+.search{
+  padding: 5px;
+  width: 49%;
+}
+.contact__form > div{
+  width: 49%;
+}
+.contact__form button{
+  width: 15%;
+  margin-left: 10px;
+}
+.contact__form >div input{
+  padding: 5px;
+  width: 80%;
+}
+
+.contacts{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+}
+.contacts li{
+  width: 49%;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contacts li p {
+  margin: 0;
+}
+
+.config{
+  display: flex;
+  align-items: center;
+}
+.delete,.edit{
+  font-size: 25px;
+  color: red;
+  position: relative;
+  margin: 0px 10px;
+}
+.edit{
+  color: #fc9803;
+}
+
+.delete:before, .edit:before{
+  content: '';
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+
+}
+.contacts li:nth-child(odd){
+  background: silver;
+}
+.alert{
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  top: 15%;
+  animation: alert .5s linear ;
+}
+.alert div{
+  max-width: 30%;
+}
+.git{
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+@keyframes  alert{
+  0%{
+    opacity: 0;
+  }
+}
